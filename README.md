@@ -17,9 +17,10 @@ The full run down: Up Arrow Pressed -> Adds to held_keys set() -> sends "forward
 
 ## Describe the functions
 ### serial_to_microbit.py:
-def on_press(key):
+#### def on_press(key):
 This function waits for the keyboard listener event for a key press, it depending what key was pressed will send via serial to the microbit transmitter board.
-def on_release(key):
+
+#### def on_release(key):
 This function works the same as on_press, just when a key is no longer being pressed, it removes the pressed key from the held_key set and sends the stop command via serial
 
 ### Microbit Transmit board
@@ -28,7 +29,13 @@ This board contains no functions, just a while True loop listening for serial co
 ### Microbit Receive board
 Like the Transmit board, this has no functions. Just a while True loop listening for radio communications to then turn on the motors based on what was received.
 
-## The requirements for the robots / pip freeze
+## The requirements / pip freeze
+See requirements.txt for packages.
 
+The pre-installed packages in Micropython on the Microbits are enough for this to function. However, on the receive board, that will need the Maqueen library (included in this repo)
 
 ## What type of license
+According to the GitHub of DFRobot, it is licensed under an MIT Open-Source license.
+
+This license allows people to: "use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software"
+> https://github.com/DFRobot/pxt-DFRobot_MaqueenPlus_v20?tab=MIT-1-ov-file#readme
