@@ -2,8 +2,9 @@
 
 ## Implementation – how did I do?
 For this project, I used the following components:
-1x Maqueen Robot
-2x Microbit boards (1 Transmitter, 1 Receiver / controlling the Maqueen Robot)
+
+* 1x Maqueen Robot
+* 2x Microbit boards (1 Transmitter, 1 Receiver / controlling the Maqueen Robot)
 
 To get these to work together, I first send serial commands via my PC to the Microbit Transmit board, this decodes the serial messages then via radio transmits them to the Microbit Receiver board. On that board, it's simplying listening for events over radio then depending what is received, will control the motors.
 
