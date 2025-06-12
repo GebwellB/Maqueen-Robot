@@ -16,7 +16,19 @@ On the Microbit Receiver board, this does basically the same as the transmit boa
 The full run down: Up Arrow Pressed -> Adds to held_keys set() -> sends "forward" via serial to Microbit Transmit board -> Decodes serial message, then sends on via radio -> Microbit Receiver board gets message, turns on motor based on the message. Once the key is released, the key is removed from held_keys and "stop" is send via serial.
 
 ## Describe the functions
+### serial_to_microbit.py:
+def on_press(key):
+This function waits for the keyboard listener event for a key press, it depending what key was pressed will send via serial to the microbit transmitter board.
+def on_release(key):
+This function works the same as on_press, just when a key is no longer being pressed, it removes the pressed key from the held_key set and sends the stop command via serial
+
+### Microbit Transmit board
+This board contains no functions, just a while True loop listening for serial communications to then send on via radio
+
+### Microbit Receive board
+Like the Transmit board, this has no functions. Just a while True loop listening for radio communications to then turn on the motors based on what was received.
 
 ## The requirements for the robots / pip freeze
+
 
 ## What type of license
