@@ -24,10 +24,10 @@ This function waits for the keyboard listener event for a key press, it dependin
 #### def on_release(key):
 This function works the same as on_press, just when a key is no longer being pressed, it removes the pressed key from the held_key set and sends the stop command via serial
 
-### Microbit Transmit board
+### Microbit Transmit board:
 This board contains no functions, just a while True loop listening for serial communications to then send on via radio
 
-### Microbit Receive board
+### Microbit Receive board:
 Like the Transmit board, this has no functions. Just a while True loop listening for radio communications to then turn on the motors based on what was received.
 
 ## The requirements / pip freeze
@@ -40,3 +40,5 @@ According to the GitHub of DFRobot, it is licensed under an MIT Open-Source lice
 
 This license allows people to: "use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software"
 > https://github.com/DFRobot/pxt-DFRobot_MaqueenPlus_v20?tab=MIT-1-ov-file#readme
+
+I have adopted the same license for this project.
